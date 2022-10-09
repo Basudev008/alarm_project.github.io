@@ -30,12 +30,8 @@
   border-radius: 50%;
 }
 
+select,
 input {
-  padding: 5px;
-  border-radius: 25%;
-}
-
-select {
   margin: 5px;
   padding: 4px;
   border-radius: 25%;

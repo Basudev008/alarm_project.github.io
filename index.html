@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Alarm Clock</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
@@ -10,32 +11,9 @@
       <div class="main-clock"></div>
       <div class="set-alarm-clock">
         <form>
-          <!-- given min and max values to check input -->
-          <input
-            type="number"
-            min="0"
-            max="12"
-            class="hour"
-            placeholder="00"
-            required
-          />
-          <input
-            type="number"
-            min="0"
-            max="59"
-            class="minute"
-            placeholder="00"
-            required
-          />
-          <input
-            type="number"
-            min="0"
-            max="59"
-            class="second"
-            placeholder="00"
-            required
-          />
-
+          <select class="hour"></select>
+          <select class="minute"></select>
+          <select class="second"></select>
           <select class="set-meridiem">
             <option value="AM">AM</option>
             <option value="PM">PM</option>

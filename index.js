@@ -6,6 +6,23 @@ const secondInput = document.querySelector(".second");
 const meridiemInput = document.querySelector(".set-meridiem");
 const alarmList = document.querySelector(".alarm-list");
 
+//create options for hour
+for (let i = 0; i <= 12; i++) {
+  let option = new Option(`${i}`);
+  hourInput.appendChild(option);
+}
+
+//create options for minute
+for (let i = 0; i <= 59; i++) {
+  let option = new Option(`${i}`);
+  minuteInput.appendChild(option);
+}
+
+//create options for second
+for (let i = 0; i <= 59; i++) {
+  let option = new Option(`${i}`);
+  secondInput.appendChild(option);
+}
 // a variable to store all alarm timings
 var alarmTimings = [];
 
@@ -41,9 +58,9 @@ setAlarm.addEventListener("click", (e) => {
     secondInput.value < 10 ? "0" + secondInput.value : secondInput.value;
 
   //clearing the alarm input box
-  hourInput.value = "";
-  minuteInput.value = "";
-  secondInput.value = "";
+  hourInput.value = 0;
+  minuteInput.value = 0;
+  secondInput.value = 0;
   let alarmInput = `${hoursValue} : ${minutesValue} : ${secondsValue} ${meridiemInput.value}`;
   createSelectedAlarmElement(alarmInput);
   alarmTimings.push(alarmInput);
