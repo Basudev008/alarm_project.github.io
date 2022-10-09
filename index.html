@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Alarm Clock</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <!--divided the container into three components - main clock, set-alarm and list of alarms with Delete button -->
+    <div class="container">
+      <div class="main-clock"></div>
+      <div class="set-alarm-clock">
+        <form>
+          <!-- given min and max values to check input -->
+          <input
+            type="number"
+            min="0"
+            max="12"
+            class="hour"
+            placeholder="00"
+            required
+          />
+          <input
+            type="number"
+            min="0"
+            max="59"
+            class="minute"
+            placeholder="00"
+            required
+          />
+          <input
+            type="number"
+            min="0"
+            max="59"
+            class="second"
+            placeholder="00"
+            required
+          />
+
+          <select class="set-meridiem">
+            <option value="AM">AM</option>
+            <option value="PM">PM</option>
+          </select>
+          <input type="submit" value="Set Alarm" class="set-alarm" />
+        </form>
+      </div>
+      <div class="alarm-list"><h3>Alarms</h3></div>
+    </div>
+  </body>
+  <script src="./index.js" type="text/javascript"></script>
+</html>
